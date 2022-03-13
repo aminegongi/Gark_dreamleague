@@ -1,0 +1,298 @@
+.html,
+body {
+    margin: 0;
+    padding: 0;
+    background: white;
+}
+
+.login_container {
+    display: grid;
+    grid-template-columns: auto 29rem;
+    row-gap: 124px;
+
+    // form {
+    //     width: 100%;
+
+    //     display: flex;
+    //     flex-direction: column;
+    //     align-items: center;
+    // }
+
+    &__terms {
+            width: 390px;
+            &__error {
+            width: 390px;
+            
+        }
+    }
+
+    .input-with-label {
+        margin-top: 15px;
+        input, select {
+            margin-top: 5px !important;
+        }
+    }
+
+    .modal_container {
+        position: fixed;
+        width: 100vw;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+
+        a {
+            color: #191616;
+            text-decoration: none;
+        }
+        .modal {
+            width: 80%;
+            position: relative;
+            top: 20%;
+            height: 60%;
+            margin: auto;
+            background: white;
+            display: grid;
+            grid-template-columns: repeat(3, 33.3%);
+            align-items: center;
+
+            .modal_item {
+                justify-self: center;
+                text-align: center;
+                align-self: center;
+                cursor: pointer;
+
+                h2 {
+                    font-size: 2.125rem;
+                    font-weight: bold;
+                    margin-top: 18.5px;
+                    margin-bottom: 21px;
+                }
+            }
+        }
+    }
+
+    .right_side {
+        text-align: center;
+        padding: 0 38px;
+        min-height: 100vh;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .title {
+            font-size: 2.38rem;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 1.75rem;
+        }
+        .description {
+            font-size: 1.13rem;
+            font-weight: 300;
+            color: #ffffff;
+            margin-bottom: 1.75rem;
+        }
+        .button {
+            background: transparent;
+            border: 1px solid white;
+            padding: 1.1rem 3rem;
+        }
+    }
+
+    button {
+        border-radius: 180px;
+        cursor: pointer;
+        padding: 12px 19px;
+        font-size: 1rem;
+        border: none;
+
+        color: #ffffff;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .light_button {
+        background-color: transparent;
+        border: 1px solid #019da9;
+        color: #019da9;
+        margin-right: 10px;
+    }
+
+    .primary_button {
+        background-color: #019da9;
+        font-size: 15px;
+    }
+
+    .left_side {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 80px;
+        padding-bottom: 3rem;
+
+        .error {
+            color: red;
+        }
+        .logo {
+            margin-bottom: 3rem;
+        }
+
+        .page_title {
+            font-size: 2.875rem;
+            font-weight: bold;
+            color: #302727;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .radio_group_button {
+            background-color: #26beb5 !important;
+        }
+
+        .create_account_btn {
+            border-top: 1px solid #dadde1;
+            width: 390px;
+            display: flex;
+            justify-content: center;
+            padding-top: 20px;
+            margin-top: 20px;
+            .button {
+                background-color: #42b72a;
+                border-radius: 10px;
+                font-size: 15px;
+            }
+        }
+        .already_have_account {
+            margin-top: 20px;
+            text-align: center;
+            a {
+                color: #26beb5;
+            }
+        }
+        .select_input {
+            width: 390px;
+            margin-top: 15px;
+            font-size: 1rem !important;
+            // height: 20px;
+        }
+
+        .isporit-input {
+            padding: 15px;
+            display: block;
+            width: 390px;
+            margin-top: 15px;
+            height: 50px;
+            font-size: 15px;
+            color: #717171;
+        }
+        .isporit-password-input-with-icon {
+            margin-top: 15px;
+            .isporit-input {
+                margin-top: 0;
+            }
+        }
+
+        .signup_btn_container {
+            display: flex;
+            justify-content: center;
+            margin-top: 38px;
+        }
+        .forgot_password {
+            margin-top: 10px;
+        }
+    }
+}
+
+.mobile_navbar {
+    display: none;
+}
+
+@media only screen and (max-width: 992px) {
+    .signup_btn_container {
+        padding-bottom: 20px !important;
+    }
+
+    .login_container {
+        display: unset;
+
+        &__terms {
+            width: calc(100vw - 50px);
+            &__error {
+                width: calc(100vw - 50px);
+            }
+        }
+        .right_side {
+            display: none;
+        }
+
+        .left_side {
+            min-height: 100vh;
+            .social_media_buttons,
+            p {
+                // display: none !important;
+            }
+            .isporit-input,
+            .select_input,
+            .create_account_btn {
+                width: calc(100vw - 50px);
+            }
+
+            .page_title {
+                font-size: 24px;
+            }
+
+            .top_section_container {
+                padding-right: 10px;
+            }
+        }
+    }
+
+    .mobile_navbar {
+        padding-top: 21px;
+        display: block;
+
+        .mobile_navbar {
+            padding: 0 10px !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .login_container {
+        .left_side {
+            min-height: calc(100vh - 78px);
+            padding-bottom: 20px;
+        }
+
+        .modal_container {
+            min-height: 100vh;
+            height: unset;
+            position: absolute;
+
+            h2 {
+                font-size: 22px !important;
+            }
+
+            .modal {
+                grid-template-columns: unset;
+                grid-template-rows: repeat(3, 33.3%);
+                position: relative;
+                padding-bottom: 50px;
+
+                @media screen and (max-width: 992px) and (min-width: 750px) {
+                    top: 50px;
+                }
+
+                img {
+                    width: 150px;
+                }
+
+                .modal_item {
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}

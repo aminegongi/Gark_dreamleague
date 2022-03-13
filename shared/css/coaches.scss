@@ -1,0 +1,331 @@
+.coaches {
+    max-width: 71.375rem;
+    margin: auto auto auto auto;
+    padding-top: 106px;
+    font-family: Roboto;
+
+    &__selected-filtered-items {
+        list-style: none;
+        padding: 0 !important;
+        margin-left: 15px;
+        margin-bottom: 0 !important;
+    }
+
+    &__selected-filtered-item {
+        background-color: #47c8c0;
+        display: inline-block;
+        color: #fff;
+        padding: 8px;
+        border-radius: 5px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+    }
+
+    &__delete-filtered-item {
+        white-space: nowrap;
+        font-size: 0.8rem;
+        color: #fff;
+        background: transparent;
+    }
+
+    &__coach_details {
+        margin-top: 1.813rem;
+        display: flex;
+
+        &__filter {
+            border-radius: 0.625rem;
+            border: solid 1px #d5d5d5;
+            background-color: #ffffff;
+            overflow: auto;
+            padding-bottom: 12px;
+            max-width: 299px;
+
+            &__input_search {
+                padding: 7px !important;
+
+                .ant-input-suffix {
+                    right: 24px !important;
+                }
+
+                input {
+                    height: 45px;
+                    border-radius: 10px;
+                    background-color: #f2f2f2;
+                }
+            }
+
+            &__input_search-mobile {
+                display: none;
+            }
+        }
+
+        &__list_of_coach {
+            width: 100%;
+            flex: 70%;
+            margin-left: 1.344rem;
+            border-radius: 0.625rem;
+            border: solid 1px #d5d5d5;
+            background-color: #ffffff;
+            padding-bottom: 20px;
+
+            &__result-number {
+                font-size: 0.875rem;
+                font-weight: 500;
+                color: #646464;
+                text-align: left;
+                margin-right: 29px;
+            }
+
+            &__length_sort-by {
+                padding: 25px 16px 14.5px 15.5px;
+                display: flex;
+                justify-content: space-between;
+
+                &__lenght {
+                    font-size: 1rem;
+                    letter-spacing: normal;
+                    color: #646464;
+                }
+
+                // &__filter {
+                //     display: none;
+                // }
+
+                &__sortby {
+                    span {
+                        font-size: 1rem;
+                        font-weight: 500;
+                        font-stretch: normal;
+                        font-style: normal;
+                        color: #000000;
+                    }
+                }
+            }
+
+            &__card {
+                padding: 1.344rem 1rem 1.063rem 0.938rem;
+                margin-bottom: 2rem;
+                justify-content: space-between;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-column-gap: 18px;
+                row-gap: 17px;
+
+                @media only screen and (max-width: 1150px) and (min-width: 992px) {
+                    grid-template-columns: 1fr 1fr;
+                }
+
+                @media only screen and (max-width: 860px) {
+                    grid-template-columns: 1fr 1fr;
+
+                    @media only screen and (max-width: 600px) {
+                        grid-template-columns: 1fr;
+                    }
+                }
+            }
+        }
+    }
+
+    .lineprofilecoach {
+        width: 100%;
+        border-top: solid 3px #f5f4f4;
+    }
+
+    .affiche {
+        img {
+            width: 100%;
+        }
+    }
+
+    .paginate div {
+        padding: 9px 13.1px 8px 14px;
+        border-radius: 3px;
+    }
+
+    .paginate {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        bottom: 0;
+        flex-wrap: wrap;
+
+        font-weight: 500;
+        border-color: #1890ff;
+
+        &__page {
+            background-color: #26beb5;
+            color: white;
+        }
+    }
+
+    .filerblock {
+        display: flex;
+    }
+
+    .filterbutton {
+        font-size: 1.3rem;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.19;
+        letter-spacing: normal;
+        text-align: left;
+        color: #47c8c0;
+        padding-left: 9px;
+        padding-top: 7px;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .coaches {
+        background-color: #f8f8f8;
+        padding: 50px 21px;
+
+        .ant-input-affix-wrapper .ant-input:not(:last-child) {
+            padding-right: 30px;
+            padding-left: 25px;
+        }
+
+        .ant-input-affix-wrapper .ant-input-suffix {
+            left: 33px;
+            width: 20px;
+        }
+
+        .lineprofilecoach {
+            display: none;
+        }
+
+        .buttonfilter {
+            margin-left: 0.438rem;
+        }
+
+        .affiche {
+            width: 100%;
+            margin: auto;
+            padding-top: 0;
+
+            &__img {
+                width: 100%;
+            }
+        }
+
+        &__coach_details {
+            margin: 11px 0;
+
+
+            &__filter {
+                &__input_search-mobile {
+                    display: block !important;
+                    padding-top: 13px !important;
+                    padding-left: 26px !important;
+                    padding-right: 29px !important;
+                    padding-bottom: 12px !important;
+                }
+            }
+
+            &__list_of_coach {
+                margin-left: 0;
+
+              
+
+
+                &__length_sort-by {
+                    padding: 0;
+
+                    display: block;
+                    row-gap: 7px;
+                    margin-left: 27px;
+                    padding-bottom: 8.8px;
+
+                    &__sortby {
+                        margin-right: 30px;
+                        display: grid;
+                        justify-self: flex-end;
+
+                        >span {
+                            display: none;
+                        }
+                    }
+
+                    &__filter {
+                        display: block;
+                        font-size: 12px;
+                    }
+
+                    &__lenght {
+                        justify-self: center;
+                        grid-row: 2/2;
+                        font-size: 0.875rem;
+                        font-weight: 500;
+                        white-space: nowrap;
+                        color: #646464;
+                    }
+                }
+            }
+
+            &__filter {
+                display: none;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .coaches {
+        padding: 0;
+
+        &__coach_details {
+            &__filter {
+                &__input_search-mobile {
+                    padding-right: 12px !important;
+                    padding-left: 12px !important;
+
+                    input {
+                        padding-left: 42px !important;
+                    }
+                }
+            }
+
+            &__list_of_coach {
+                border: none;
+                background-color: transparent;
+
+                &__card {
+                    padding: 0;
+                }
+
+                &__length_sort-by {
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+                    margin: 0 !important;
+                    padding-right: 16px !important;
+                    padding-left: 16px !important;
+
+                    &__lenght {
+                        text-align: left;
+                        width: 100%;
+                    }
+
+                    &__filter {
+                        display: flex;
+                        justify-content: start;
+                        margin-right: 27px;
+                        width: 100%;
+                    }
+
+                    &__sortby {
+                        width: 100%;
+                        display: flex;
+                        justify-content: start;
+                        margin-right: 27px;
+
+                        div {
+                            width: 100% !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

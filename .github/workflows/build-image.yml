@@ -1,0 +1,32 @@
+name: Push image
+
+on:
+  push:
+    branches:
+    - dev
+    - test
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Set BUILD_ID
+      run: |
+        branch=${GITHUB_REF##*/}
+        sha=${GITHUB_SHA::8}
+        ts=$(date +%s)
+        echo "BUILD_ID=${branch}-${sha}-${ts},latest-${branch}" >> $GITHUB_ENV
+    
+    - name: Build docker images using cache
+      uses: whoan/docker-build-with-cache-action@v5
+      with:
+        # Name of the image to build
+        image_name: isporit-website
+        image_tag: ${{env.BUILD_ID}}
+        username: isporit
+        password: ${{secrets.ISPORIT_ORG_TOKEN}} 
+        registry: ghcr.io
