@@ -27,8 +27,11 @@ function DreamAfricaTournamentPage(params) {
     onSnapshot(collection(firebaseDb, 'teams'), (snap) => {
       setTeams(snap.docs.map((el) => ({ ...el.data(), id: el.id })))
     })
-    if (router.query.isDremLeagueAdmin) {
-      localStorage.setItem('isDremLeagueAdmin', router.query.isDremLeagueAdmin)
+    if (router.query.isDreamLeagueAdmin) {
+      localStorage.setItem(
+        'isDreamLeagueAdmin',
+        router.query.isDreamLeagueAdmin,
+      )
     }
   }, [])
   return (

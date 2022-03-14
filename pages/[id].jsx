@@ -30,7 +30,7 @@ function TournamentDetails() {
 
   const router = useRouter()
   useEffect(() => {
-    if (localStorage.getItem('isDremLeagueAdmin')) {
+    if (localStorage.getItem('isDreamLeagueAdmin')) {
       setIsAdmin(true)
     }
   }, [])
