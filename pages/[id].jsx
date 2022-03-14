@@ -209,7 +209,13 @@ function TournamentDetails() {
     return <div className="" />
   }
   return (
-    <div className="bg-white">
+    <div
+      style={{
+        backgroundImage:
+          'url(https://firebasestorage.googleapis.com/v0/b/achour-8acf1.appspot.com/o/6bc870af-bef7-4c7a-84f2-58e00d59767e.jpg?alt=media&token=ada3021b-0a27-4a64-8fe8-7587fd4fb1a0)',
+      }}
+      className="bg-white"
+    >
       {/* <div className="flex justify-between p-4 items-center">
         <Link href="/dream-africa-cup">
           <a href="/dream-africa-cup">
@@ -226,7 +232,7 @@ function TournamentDetails() {
           Contact
         </button>
       </div> */}
-      <div className="w-full">
+      <div className="w-full bg-white">
         <Link href="/">
           <a href="/">
             <img
@@ -238,8 +244,8 @@ function TournamentDetails() {
         </Link>
       </div>
       <div className="">
-        <Tabs defaultActiveKey="2" className="pb-10">
-          <Tabs.TabPane tab="Matchs" key="1">
+        <Tabs defaultActiveKey="2" className="pb-10 ">
+          <Tabs.TabPane tab="Matchs" key="1" className="">
             {tournamentDetails.matches
               .sort((a, b) => new Date(b.date) - new Date(a.date))
               .map((el, index) => {
@@ -258,7 +264,7 @@ function TournamentDetails() {
                       setSelectedMatch({ ...el, index })
                       setIsAddModalOpen(true)
                     }}
-                    className="border rounded-md m-1 p-4 border-gray-300 mb-10"
+                    className="border rounded-md m-1 p-4 border-gray-300 mb-10 bg-white"
                   >
                     <div className="flex justify-between">
                       <div className="">
@@ -332,7 +338,7 @@ function TournamentDetails() {
           </Tabs.TabPane>
           <Tabs.TabPane tab="Groupes" key="2">
             {tournamentDetails.groupStages.map((el) => (
-              <div key={el.id} className="mb-10 capitalize">
+              <div key={el.id} className="mb-10 capitalize bg-white">
                 <div className="ml-2 text-black mb-1 font-bold">{el.title}</div>
                 <div className="">
                   <div className="">

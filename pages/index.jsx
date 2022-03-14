@@ -39,7 +39,13 @@ function DreamAfricaTournamentPage(params) {
       <Head>
         {/* <title>iSporit - trouver un coach sportif ou un coach de yoga</title> */}
       </Head>
-      <div className="pb-5 bg-white">
+      <div
+        style={{
+          backgroundImage:
+            'url(https://firebasestorage.googleapis.com/v0/b/achour-8acf1.appspot.com/o/6bc870af-bef7-4c7a-84f2-58e00d59767e.jpg?alt=media&token=ada3021b-0a27-4a64-8fe8-7587fd4fb1a0)',
+        }}
+        className="pb-5 bg-white"
+      >
         {/* <div className="flex justify-between p-4 items-center">
           <Link href={routes.HOME.path}>
             <a href={routes.HOME.path}>
@@ -62,7 +68,7 @@ function DreamAfricaTournamentPage(params) {
           {tournaments.map((el) => (
             <Link href={{ pathname: `/${el.id}` }} type="button" key={el.id}>
               <a
-                className="flex justify-between items-center border rounded-md m-4 p-4"
+                className="flex justify-between items-center border rounded-md m-4 p-4 bg-white"
                 href={`d/${el.id}`}
               >
                 <div className="text-black font-bold">{el.title}</div>
@@ -73,7 +79,9 @@ function DreamAfricaTournamentPage(params) {
             </Link>
           ))}
         </div>
-        <div className="font-bold m-5 text-base text-center">Les equipes</div>
+        <div className="font-bold m-5 text-base text-center text-white">
+          Les equipes
+        </div>
         <div className="">
           {teams.map((el) => (
             <div className="flex items-center m-4 p-4 bg-white">

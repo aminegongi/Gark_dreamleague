@@ -20,6 +20,7 @@ import {
 import { CLUB, REQUEST_FAILED, REQUEST_SUCCEEDED } from '../shared/constants'
 // import LoginModal from '../shared/components/LoginModal/LoginModal'
 import routes from '../utils/routes'
+import '../style.css'
 // import CoachDetailsPageLoading from '../shared/components/CoachDetailsPageLoading/CoachDetailsPageLoading'
 // import CoachesPageLoading from '../shared/components/CoachesPageLoading/CoachesPageLoading'
 // import FacebookPixel from '../shared/components/FacebookPixel'
